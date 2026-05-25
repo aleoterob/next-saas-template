@@ -46,17 +46,14 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
       >
         <CardHeader className="text-center max-md:space-y-0 max-md:pt-2 max-md:pb-1 lg:gap-0.5 lg:px-5 lg:pt-1">
           <CardTitle className="text-lg text-primary-foreground md:text-xl">
-            LuaBank
+            Next Saas Template
           </CardTitle>
           <CardDescription className="text-primary-foreground/85 max-md:text-xs md:text-sm">
             Ingresa con tu email y contraseña
           </CardDescription>
         </CardHeader>
         <CardContent className="max-md:px-4 max-md:pb-3 lg:px-5 lg:pb-1">
-          <form
-            noValidate
-            onSubmit={handleSubmit}
-          >
+          <form noValidate onSubmit={handleSubmit}>
             <FieldGroup className="gap-3 md:gap-4 lg:gap-4">
               <LoginBrandSeparator className="h-7 md:h-10 lg:h-8" />
 
@@ -160,10 +157,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
 
               <Field className="gap-1.5 md:gap-2 lg:gap-2">
                 {serverError && (
-                  <p
-                    className="text-center text-xs text-red-400"
-                    role="alert"
-                  >
+                  <p className="text-center text-xs text-red-400" role="alert">
                     {serverError}
                   </p>
                 )}
