@@ -1,8 +1,9 @@
 import type { Preview } from '@storybook/nextjs-vite'
 import { initialize, mswLoader } from 'msw-storybook-addon'
 
-import { QueryProvider } from '../src/shared/providers/query-provider'
-import '../src/app/globals.css'
+import '@/app/globals.css'
+import { AppStoreProvider } from '@/shared/providers/app-store-provider'
+import { QueryProvider } from '@/shared/providers/query-provider'
 import { mswHandlers } from './msw-handlers'
 
 initialize({ onUnhandledRequest: 'bypass' })
@@ -10,11 +11,13 @@ initialize({ onUnhandledRequest: 'bypass' })
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <QueryProvider>
-        <div className="gradient-page-background min-h-svh p-6 text-foreground">
-          <Story />
-        </div>
-      </QueryProvider>
+      <AppStoreProvider>
+        <QueryProvider>
+          <div className="gradient-page-background min-h-svh p-6 text-foreground">
+            <Story />
+          </div>
+        </QueryProvider>
+      </AppStoreProvider>
     ),
   ],
   loaders: [mswLoader],
