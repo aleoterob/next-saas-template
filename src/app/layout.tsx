@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { JotaiProvider } from '@/shared/providers/jotai-provider';
-import { QueryProvider } from '@/shared/providers/query-provider';
+import { TanstackQueryProvider } from '@/shared/providers/tanstack-query-provider';
 import './globals.css';
 
 const geistSans = Geist({
@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body className="gradient-page-background min-h-full flex flex-col">
         <JotaiProvider>
-          <QueryProvider>{children}</QueryProvider>
+          <TanstackQueryProvider>{children}</TanstackQueryProvider>
         </JotaiProvider>
       </body>
     </html>
