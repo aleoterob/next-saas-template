@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { AppStoreProvider } from '@/shared/providers/app-store-provider';
+import { JotaiProvider } from '@/shared/providers/jotai-provider';
 import { QueryProvider } from '@/shared/providers/query-provider';
 import './globals.css';
 
@@ -30,9 +30,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="gradient-page-background min-h-full flex flex-col">
-        <AppStoreProvider>
+        <JotaiProvider>
           <QueryProvider>{children}</QueryProvider>
-        </AppStoreProvider>
+        </JotaiProvider>
       </body>
     </html>
   );
