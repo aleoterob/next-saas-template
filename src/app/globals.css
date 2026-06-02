@@ -74,8 +74,6 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --lua-dark-blue: #13343d;
-  --lua-pale-blue: #2dcdf1;
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: var(--secondary);
@@ -85,6 +83,8 @@
   --sidebar-accent-foreground: var(--secondary);
   --sidebar-border: var(--secondary);
   --sidebar-ring: var(--secondary);
+  --lua-dark-blue: #13343d;
+  --lua-pale-blue: #2dcdf1;
 }
 
 .dark {
@@ -119,6 +119,8 @@
   --sidebar-accent-foreground: oklch(0.97 0 0);
   --sidebar-border: var(--secondary);
   --sidebar-ring: oklch(0.97 0 0);
+  --lua-dark-blue: #13343d;
+  --lua-pale-blue: #2dcdf1;
 }
 
 @layer base {
